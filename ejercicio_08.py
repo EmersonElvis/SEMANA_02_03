@@ -8,8 +8,8 @@ potencia de un numero elevado a otro. Sabemos que
 #b^n = b^(n−1)/2 × b^(n−1)/2 × b si n es impar.
 
 def potencia_recursiva(base,exponente):
-    """ Precondición: n debe ser mayor o igual que cero.
-        Devuelve: b\^n. """
+    """ Precondición: exponente debe ser mayor o igual que cero.
+        Devuelve: base\^exponente. """
 
     # Caso base
     if exponente <= 0:
