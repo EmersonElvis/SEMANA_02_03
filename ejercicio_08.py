@@ -4,9 +4,6 @@ potencia de un numero elevado a otro. Sabemos que
 2n = 2(n-1)/2. 2(n-1)/2.2 si n es impar'''
 
 
-#b^n = b^(n/2) × b^(n/2) si n es par.
-#b^n = b^(n−1)/2 × b^(n−1)/2 × b si n es impar.
-
 def potencia_recursiva(base,exponente):
     """ Precondición: exponente debe ser mayor o igual que cero.
         Devuelve: base\^exponente. """
@@ -15,11 +12,11 @@ def potencia_recursiva(base,exponente):
     if exponente <= 0:
         resultado_f=1
     else:
-        # n par
+        # exponente par
         if exponente % 2 == 0:
             resultado_i = potencia_recursiva(base, exponente/2)
             resultado_f=resultado_i*resultado_i
-        # n impar
+        # exponente impar
         else:
             resultado_i = potencia_recursiva(base, (exponente-1)/2)
             resultado_f= resultado_i * resultado_i * base
